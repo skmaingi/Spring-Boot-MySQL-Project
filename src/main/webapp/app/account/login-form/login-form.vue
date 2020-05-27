@@ -20,7 +20,7 @@
                       <span>Remember me</span>
                     </b-form-checkbox>
                     <div>
-                        <b-button type="submit" variant="primary">Sign in</b-button>
+                        <b-button type="submit" variant="primary">Sign In</b-button>
                     </div>
                 </b-form>
                 <p></p>
@@ -31,8 +31,7 @@
                 </div>
                 <div>
                     <b-alert show variant="warning">
-                      <span>You don't have an account yet?</span>
-                      <b-link :to="'/register'" class="alert-link">Register a new account</b-link>
+                      <b-link :to="'/register'" class="alert-link">Register</b-link>
                     </b-alert>
                 </div>
             </div>

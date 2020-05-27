@@ -24,6 +24,12 @@ const JhiLogsComponent = () => import('../admin/logs/logs.vue');
 const JhiAuditsComponent = () => import('../admin/audits/audits.vue');
 const JhiMetricsComponent = () => import('../admin/metrics/metrics.vue');
 /* tslint:disable */
+// prettier-ignore
+const Record = () => import('../entities/record/record.vue');
+// prettier-ignore
+const RecordUpdate = () => import('../entities/record/record-update.vue');
+// prettier-ignore
+const RecordDetails = () => import('../entities/record/record-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 Vue.use(Router);
@@ -140,6 +146,31 @@ export default new Router({
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
       meta: { authorities: ['ROLE_ADMIN'] }
+    }
+    ,
+    {
+      path: '/record',
+      name: 'Record',
+      component: Record,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/record/new',
+      name: 'RecordCreate',
+      component: RecordUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/record/:recordId/edit',
+      name: 'RecordEdit',
+      component: RecordUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/record/:recordId/view',
+      name: 'RecordView',
+      component: RecordDetails,
+      meta: { authorities: ['ROLE_USER'] }
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]

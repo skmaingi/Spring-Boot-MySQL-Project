@@ -1,0 +1,11 @@
+entity Record {
+    date LocalDate required
+    title String required maxlength(100)
+    detail String
+}
+paginate * with pagination
+service all with serviceImpl
+
+
+
+
